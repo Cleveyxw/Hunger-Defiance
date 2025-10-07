@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cleveyxw.view.MainMenuController">
+   <children>
+      <ImageView fitHeight="572.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/mainmenubackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="285.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleClose" styleClass="main-menu-exit" text="Exit Game">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button layoutX="284.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleStart" styleClass="main-menu-start" text="Start Game">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button layoutX="273.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleLeaderboards" styleClass="main-menu-leaderboards" text="Leaderboards">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button defaultButton="true" layoutX="566.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleTutorial" styleClass="main-menu-tutorial" text="How to Play?">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Label layoutX="456.0" layoutY="469.0" styleClass="white-label" text="Ver 1.0 | Developed by Cleve" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Label>
+      <Label fx:id="currentPlayer" layoutX="14.0" layoutY="10.0" text="Current Player: ">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Button fx:id="handleLogout" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleLogout" styleClass="main-menu-logout" text="Log Out">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

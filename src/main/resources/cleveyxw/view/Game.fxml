@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cleveyxw.view.GameController">
+    <children>
+        <SplitPane fx:id="horizontalSplitPane" dividerPositions="0.2050561797752809" layoutX="140.0" layoutY="45.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <SplitPane fx:id="verticalSplitPane" dividerPositions="0.14667049368541904, 0.585820895522388, 0.7385189437428243" layoutX="272.0" layoutY="-40.0" prefHeight="89.0" prefWidth="598.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="114.0" prefWidth="103.0" styleClass="biege-pane">
+                           <children>
+                              <ImageView fitHeight="127.0" fitWidth="100.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/seed.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="resourceLabel" layoutX="20.0" layoutY="83.0" prefWidth="79.0" text="Seeds: 0">
+                                 <font>
+                                    <Font name="System Bold" size="11.0" />
+                                 </font></Label>
+                           </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="282.0" styleClass="biege-pane">
+                           <children>
+                              <ImageView fx:id="cornImageView" fitHeight="106.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/cornmaster_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="carrotImageView" fitHeight="106.0" fitWidth="100.0" layoutX="99.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/carrotcher_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="potatoImageView" fitHeight="100.0" fitWidth="99.0" layoutX="199.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/shieldpotato_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                        <AnchorPane prefHeight="114.0" prefWidth="114.0" styleClass="biege-pane">
+                           <children>
+                              <ImageView fx:id="shovelImageView" fitHeight="100.0" fitWidth="99.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/shovel_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                        <AnchorPane prefHeight="114.0" prefWidth="159.0" styleClass="biege-pane">
+                           <children>
+                              <Label fx:id="scoreLabel" layoutX="43.0" layoutY="41.0" text="Score: 0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="pauseButton" layoutX="127.0" mnemonicParsing="false" onAction="#onPauseButtonClicked" prefHeight="23.0" prefWidth="52.0" text="II" />
+                           </children></AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <GridPane fx:id="gameGrid" layoutX="124.0" layoutY="67.0" prefHeight="313.6" prefWidth="598.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="81.39998779296874" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="80.60001220703126" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.800048828125" minWidth="10.0" prefWidth="80.79999694824221" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.19996643066406" minWidth="10.0" prefWidth="78.20003662109372" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.39996337890625" minWidth="10.0" prefWidth="93.39999999999998" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.39996337890625" minWidth="10.0" prefWidth="91.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.39996337890625" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
